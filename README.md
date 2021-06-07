@@ -26,9 +26,26 @@
 2. deverá ter um CARD de informações antes do inicio do jogo.
 3. o usuário poderá escolher uma entre quatro alternativas.
 4. o QUIZ deverá tem um tempo de 15 segundos para cada resposta.
-5. ter botões de sair e reiniciar o QUIZ.
+5. ter o botão  de sair do QUIZ.
 6. ter pontuação do usuário ao finial do QUIZ.
 7. Deverá se adequar ao tamanho de tela.
+
+
+## Slides
+
+<img src="design/quizbox.png">
+
+<hr>
+
+<img src="design/quizbox2.png">
+
+<hr>
+
+<img src="design/resultado.png">
+
+<hr>
+
+<img src="design/mobile.png">
 
 ## Recursos
 

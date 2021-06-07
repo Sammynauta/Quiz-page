@@ -1,20 +1,23 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css" integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css" integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk"
+        crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/css/style.css">
     <title>Quiz Page</title>
 
 </head>
+
 <body>
     <!---BOTAO INICIAR-->
     <div class="start-btn"><button>Iniciar QUIZ</button></div>
-    
+
     <!-- INFO BOX-->
     <div class="info-box">
         <div class="info-titulo">
@@ -24,9 +27,10 @@
         <div class="info-lista">
             <p>1. Você terá <span>15 segundos</span> para responder cada questão.</p>
             <p>2. Não é possivel passar para próxima questão sem responder.</p>
-            <p>3. É permitido selecionar apenas <span>UMA</span> resposta.</p>
-            <p>4. Não é permitido você Sair em quanto estiver jogando.</p>
-            <p>5. Você ganha <span>PONTOS</span> por cada resposta <span>CERTA!</span></p>
+            <p>3. Se o relógio zerar, irá voltar automaticamene para iniciar.</p>
+            <p>4. É permitido selecionar apenas <span>UMA</span> resposta.</p>
+            <p>5. Não é permitido você Sair em quanto estiver jogando.</p>
+            <p>6. Você ganha <span>PONTOS</span> por cada resposta <span>CERTA!</span></p>
         </div>
 
         <div class="botoes">
@@ -38,19 +42,19 @@
     <!--QUIZ BOX-->
     <div class="box-quiz">
         <header>
-            <div class="titulo">Perguntinhas</div>
+            <div class="titulo">Mundo Nerd</div>
             <div class="tempo">
                 <div class="tempo-texto">Tempo: </div>
                 <div class="tempo-segundos">15</div>
             </div>
         </header>
-        
+
         <section>
             <div class="pergunta-texto">
-                <span>Quanto é 2 + 2 ?</span>
+                <!---<span>Quanto é 2 + 2 ?</span>-->
             </div>
             <div class="options-lista">
-                <div class="option">
+                <!---<div class="option">
                     <span>A resposta  é 4</span>
                     <div class="icon v"><i class="far fa-check-circle"></i></div>
                 </div>
@@ -63,16 +67,16 @@
                 </div>
                 <div class="option">
                     <span>A resposta  é 0</span>
-                </div>
+                </div>-->
             </div>
         </section>
 
         <footer>
             <div class="total-pgt">
-                <span>1<p>De</p>5 Perguntas</span>
+                <!---  <span>1<p>De</p>5 Perguntas</span>-->
             </div>
             <div class="proxima-pgt">
-                <button >Próxima</button>
+                <button>Próxima</button>
             </div>
         </footer>
     </div>
@@ -84,18 +88,22 @@
             <span>Você terminou o Quiz!</span>
         </div>
         <div class="pontos-quiz">
-            <span>Que pena, você só acertou <p>2</p> de <p>5</p>.</span>
+            <!---<span>Que pena, você só acertou <p>2</p> de <p>5</p>.</span>-->
         </div>
         <div class="btn-resultado">
             <button class="quit-quiz">Sair do Quiz</button>
-            <button class="restart-quiz">Reiniciar Quiz</button>
         </div>
     </div>
 
     <div class="social-media">
-       <a href="https://www.instagram.com/sam_diogo/"> <i class="fab fa-instagram"> </i></a>
+        <a href="https://www.instagram.com/sam_diogo/"> <i class="fab fa-instagram"> </i></a>
+    </div>
+    <div class="social-media2">
+        <a href="https://github.com/Sammynauta"><i class="fab fa-github"></i></a>
     </div>
 
     <script src="/js/script.js"></script>
+    <script src="/js/perguntas.js"></script>
 </body>
+<span class="Sam">Densevolvido por Samuel Diogo</span>
 </html>

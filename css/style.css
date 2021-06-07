@@ -36,7 +36,6 @@ body {
     transform: scale(0.90);
 }
 
-
 /*--------CARD DE INFORMAÇÕES--------*/
 .info-box {
     display: none;
@@ -44,6 +43,10 @@ body {
     background: white;
     border-radius: 5px;
     margin: 8px;
+  
+}
+.info-box.ativadoinfo {
+    display: initial;
 }
 
 .info-box .info-titulo {
@@ -125,6 +128,11 @@ body {
     box-shadow: 2px 3px 5px 1px rgba(0,0,0,0.3);
 }
 
+.box-quiz.ativadoquiz{
+    top: -30px;
+    display: initial;
+}
+
 .box-quiz header {
     position: relative;
     z-index: 3;
@@ -142,6 +150,7 @@ body {
     font-weight: 600;
 }
 
+/*-----------RELOGIO----------*/
 .box-quiz header .tempo {
     display: flex;
     align-items: center;
@@ -174,6 +183,7 @@ body {
     border: 2px solid rgb(77, 77, 77);
 }
 
+/*--------LISTA DE OPCOES--------*/
 .box-quiz section {
     padding: 25px 30px;
 }
@@ -195,13 +205,30 @@ body {
     border-radius: 5px;
     border: 1px solid rgb(128, 128, 128);
     transform: scale(1);
-    transition: all 0.5s;
+    transition: all 0.4s;
     justify-content: space-between;
     align-items: center;
 }
 
+.options-lista .option.disable {
+    pointer-events: none;
+}
 .box-quiz section .option:hover {
     background: rgba(175, 175, 175, 0.644);
+}
+.box-quiz section .option.correta {
+    background: rgb(144, 255, 144);
+    color: green;
+    text-transform: uppercase;
+    font-weight: 600;
+    border: 1px solid green;
+}
+.box-quiz section .option.incorreta {
+    background: rgb(252, 166, 166);
+    color: rgb(209, 53, 53);
+    text-transform: uppercase;
+    font-weight: 600;
+    border: 1px solid rgb(255, 99, 99);
 }
 
 .box-quiz section .option:active {
@@ -239,6 +266,7 @@ body {
 }
 
 .proxima-pgt button {
+    display: none;
     background: #0483ccf3;
     padding: 5px 10px;
     border: 2px solid #0483cc77;
@@ -275,11 +303,15 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-
+}
+.resultado-quiz.ativadoResultado {
+    display: flex;
+    
 }
 .resultado-quiz .icon {
     padding: 10px;
 }
+
 .resultado-quiz .icon.medalha {
     font-size: 54px;
     color: #0483ccf3;
@@ -304,7 +336,7 @@ body {
 }
 
 .pontos-quiz {
-    margin-bottom: 5px;
+    margin-bottom: 15px;
     user-select: none;
 }
 .pontos-quiz span {
@@ -344,8 +376,13 @@ body {
     color: #0483ccf3;
     border: 2px solid #0483cc77;
 }
-.btn-resultado .restart-quiz:hover {
-    background: #003f63f3;
+
+.Sam {
+    display: flex;
+    position: absolute;
+    bottom: 1px;
+    color: white;
+    text-transform: uppercase;
 }
 
 .social-media {
@@ -368,14 +405,35 @@ body {
     backdrop-filter: blur(2px);
     overflow: hidden;
 }
-.social-media a {
+.social-media2 {
+    display: flex;
+    position: absolute;
+    bottom: 30px;
+    right: 90px;
+    border-radius: 10px;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    width: 50px;
+    font-size: 1.8em;
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    border-right: 1px solid rgba(255, 255, 255, 0.2);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 5px 45px rgba(0,0,0,0.2);
+    cursor: pointer;
+    transition: 0.5s;
+    backdrop-filter: blur(2px);
+    overflow: hidden;
+}
+
+.social-media a, .social-media2 a  {
     padding: 10px;
     color: white;
 }
-.social-media:hover {
+.social-media:hover, .social-media2:hover {
     transform: translateY(-10px);
 }
-.social-media::before {
+.social-media::before, .social-media2::before {
     content: '';
     position: absolute;
     top: 0;
@@ -386,6 +444,31 @@ body {
     transform: skewX(45deg) translateX(90px);
     transition: 0.7s;
 }
-.social-media:hover::before {
+.social-media:hover::before, .social-media2:hover::before {
     transform: skewX(45deg) translateX(-90px);
+}
+
+@media (max-width: 768px) {
+    .info-box .info-titulo {
+        font-size: 20px;
+    }
+    .info-box .info-lista {
+        font-size: 14px;
+    }
+    .box-quiz section .pergunta-texto {
+        font-size: 20px;
+    }
+    .resultado-quiz .quiz-texto-resultado span {
+        font-size: 16px;
+        font-weight: 500;
+     }
+     .pontos-quiz {
+        margin-bottom: 13px;
+        user-select: none;
+    }
+    .pontos-quiz span {
+        display: flex;
+        font-size: 15px;
+        font-weight: 500;
+    }
 }
